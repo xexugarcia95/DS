@@ -5,12 +5,14 @@ public class Dinero implements IDinero {
     private int fCantidad;
     private String fMoneda;
     public Dinero(int cantidad, String moneda) {
-        fCantidad= cantidad;
-        fMoneda= moneda;
+        fCantidad = cantidad;
+        fMoneda = moneda;
     }
+    
     public int cantidad() {
         return fCantidad;
     }
+    
     public String moneda() {
         return fMoneda;
     }
@@ -18,9 +20,11 @@ public class Dinero implements IDinero {
 	@Override
 	public IDinero add(IDinero d) {
 		// TODO Auto-generated method stub
-		if (((Dinero)d).moneda().equals(moneda()))
-            return new Dinero(cantidad()+(((Dinero)d).cantidad()),moneda());
-         return new BolsaDinero(this,(Dinero)d);
+		if (((Dinero)d).moneda().equals(this.fMoneda)){
+            return new Dinero(this.fCantidad + ((Dinero) d).cantidad(),this.fMoneda);
+		}else{
+			return new BolsaDinero(this,(Dinero)d);
+		}
 	}
 	public boolean equals(Object objeto) {
             if(objeto instanceof Dinero)

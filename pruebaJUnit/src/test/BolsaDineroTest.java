@@ -28,6 +28,7 @@ public class BolsaDineroTest {
     private BolsaDinero fMB3;
     private BolsaDinero fMB4;
     
+    @Before
     public void setUp() throws Exception
     {
         f10CHF = new Dinero(10,"CHF");
@@ -46,6 +47,7 @@ public class BolsaDineroTest {
         
     }
     
+    @Test
     public void testEqualsBolsa()
     {
         testReflexiva();
@@ -53,6 +55,7 @@ public class BolsaDineroTest {
         testTransitiva();
     }
     
+    @Test
     public void testAdd()
     {
         assertFalse(fMB1.BolsaEquals(fMB2.vector())); //Bolsas distintas
