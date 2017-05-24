@@ -6,9 +6,12 @@
 
 package test;
 
-import static org.junit.Assert.*;
+
 import org.junit.Before;
 import org.junit.Test;
+
+import junit.framework.TestCase;
+
 import java.util.Vector;
 import src.*;
 
@@ -18,7 +21,7 @@ import src.*;
  * @author Jesús Manuel García Palma
  * @correo xexugarcia95@gmail.com / jesusluisbcrespo@correo.ugr.es
  */
-public class BolsaDineroTest {
+public class BolsaDineroTest extends TestCase {
     private Dinero f10CHF;
     private Dinero f12CHF;
     private Dinero f14CHF;
