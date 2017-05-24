@@ -23,4 +23,9 @@ public abstract class Sujeto {
 			observador.actualizar(this);
 		}
 	}
+	
+	public List lista()
+	{
+		return observadores;
+	}
 }

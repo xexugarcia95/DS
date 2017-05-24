@@ -20,6 +20,7 @@ public class ObservadorTest {
 	@Before
 	public void setUp()
 	{
+		System.out.println("Llamando al setUp...\n");
 		s = new SujetoLista();
 		o = new Observador();
 		llamada = false;
