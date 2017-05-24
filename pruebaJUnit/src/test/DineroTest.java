@@ -1,7 +1,9 @@
 package test;
 
+import org.junit.Before;
+import org.junit.Test;
+
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
 import src.BolsaDinero;
 import src.Dinero;
 import src.IDinero;
@@ -14,6 +16,8 @@ public class DineroTest extends TestCase
     private Dinero f16CHF;
     private Dinero f18CHF;
     
+    
+    @Before
     protected void setUp() throws Exception
     {
         f10CHF = new Dinero(10,"CHF");
@@ -23,7 +27,8 @@ public class DineroTest extends TestCase
         f18CHF = new Dinero(18,"CHF");
     }
     
-    
+    @Test
+    public void testAdd()
     {
        IDinero sumaIgual = f12CHF.add(f14CHF);
        IDinero distintos = f10CHF.add(f14CHF);
@@ -35,7 +40,7 @@ public class DineroTest extends TestCase
        assertTrue(distintos instanceof BolsaDinero);
     }
     
-    
+    @Test
     public void testEquals()
     {
        testReflexiva();
